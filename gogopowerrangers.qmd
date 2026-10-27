@@ -23,5 +23,6 @@ penguins %>% group_by(species) %>% summarize(meanBillLength = mean(bill_length_m
 penguins %>% ggplot() + geom_point(aes(x = bill_depth_mm, y = bill_length_mm), color="hotpink")
 ```
 
-```{1 + 1}
+```{r}
+penguins %>% ggplot() + geom_col(aes(x = island, y = bill_length_mm), fill = "aquamarine", color = "black")
 ```
