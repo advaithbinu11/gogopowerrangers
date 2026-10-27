@@ -7,5 +7,21 @@ title: "gogopowerrangers"
 Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
 
 ```{r}
-1 + 1
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+penguins <- palmerpenguins::penguins
+```
+
+```{r}
+penguins %>% group_by(species) %>% summarize(meanBillLength = mean(bill_length_mm, na.rm = TRUE))
+```
+
+```{r}
+penguins %>% ggplot() + geom_point(aes(x = bill_depth_mm, y = bill_length_mm), color="hotpink")
+```
+
+```{1 + 1}
 ```
